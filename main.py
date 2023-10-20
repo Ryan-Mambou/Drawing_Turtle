@@ -6,12 +6,12 @@ tim = Turtle()
 
 tim.shape('turtle')
 
+colors = ['dark goldenrod', 'pale turquoise', 'light coral', 'indigo', 'medium violet red', 'hot pink', 'pale violet',
+          'tomato', 'goldenrod', 'dark cyan']
+
 
 def draw_shape(angle, number_of_sides):
-    colors = ['blue', 'green', 'yellow', 'red', 'orange', 'indigo', 'pink', 'black', 'brown', 'gray']
-    tim.color(random.choice(colors))
     while number_of_sides > 0:
-        tim.color(random.choice(colors))
         tim.forward(100)
         tim.right(angle)
         number_of_sides -= 1
@@ -19,6 +19,7 @@ def draw_shape(angle, number_of_sides):
 
 for number_of_sides in range(3, 10):
     angle = 360/number_of_sides
+    tim.color(random.choice(colors))
     draw_shape(angle, number_of_sides)
 
 screen = Screen()
